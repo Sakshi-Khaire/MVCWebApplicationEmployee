@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Project1.Employee>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <button class="btn btn-light" style="color:white !important;">
+     @Html.ActionLink("Create New", "Create")
+    </button>
+
+    <button class="btn btn-light" style="color:white !important;">
+        @Html.ActionLink("Show Managers", "Manager")
+    </button>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Designation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManagerId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManagerId)
+        </td>
+        <td>
+            <button class="btn btn-primary" style="color:white !important;">
+                @Html.ActionLink("Edit", "Edit", new { id = item.EmployeeId }, new { style = "color:white" })
+            </button>
+            <button class="btn btn-info" style="color:white !important;">
+                @Html.ActionLink("Details", "Details", new { id = item.EmployeeId }, new { style = "color:white" })
+            </button>
+            <button class="btn btn-danger" style="color:white !important;">
+                @Html.ActionLink("Delete", "Delete", new { id = item.EmployeeId }, new { style = "color:white" })
+            </button>
+
+        </td>
+    </tr>
+}
+
+</table>
