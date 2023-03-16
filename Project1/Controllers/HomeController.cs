@@ -94,7 +94,7 @@ namespace Project1.Controllers
         
         public ActionResult Manager()
         {
-            var managers = _context.Employees.Where(x => x.ManagerId == null).OrderBy(x => x.Name).ToList();
+            var managers = _context.Employees.Where(x => x.Designation == "Manager"|| x.Designation == "manager").OrderBy(x => x.Name).ToList();
             return View(managers);
         }
     }
