@@ -30,7 +30,10 @@
         <th>
             @Html.DisplayNameFor(model => model.Designation)
         </th>
-        
+        <th>
+            @Html.DisplayNameFor(model => model.ManagerId)
+        </th>
+
     </tr>
 
 @foreach (var item in Model) {
@@ -50,7 +53,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Designation)
         </td>
-        
+        <td>
+            @Html.DisplayFor(modelItem => item.ManagerId)
+        </td>
        
     </tr>
 }

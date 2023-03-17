@@ -15,6 +15,7 @@
           <Property Name="Salary" Type="nchar" MaxLength="10" />
           <Property Name="Designation" Type="nvarchar" MaxLength="50" />
           <Property Name="ManagerId" Type="int" />
+          <Property Name="Status" Type="int" />
         </EntityType>
         <EntityContainer Name="MVCcrudDBMainModelStoreContainer">
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
@@ -34,8 +35,9 @@
           <Property Name="Salary" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ManagerId" Type="Int32" />
+          <Property Name="Status" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="MVCcrudDBMainContext" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MVCcrudDBContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Employees" EntityType="Self.Employee" />
         </EntityContainer>
       </Schema>
@@ -43,7 +45,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MVCcrudDBMainModelStoreContainer" CdmEntityContainer="MVCcrudDBMainContext">
+        <EntityContainerMapping StorageEntityContainer="MVCcrudDBMainModelStoreContainer" CdmEntityContainer="MVCcrudDBContext">
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="MVCcrudDBMainModel.Employee">
               <MappingFragment StoreEntitySet="Employee">
@@ -53,6 +55,7 @@
                 <ScalarProperty Name="Salary" ColumnName="Salary" />
                 <ScalarProperty Name="Designation" ColumnName="Designation" />
                 <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

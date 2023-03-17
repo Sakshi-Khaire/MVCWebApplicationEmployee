@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="MVCcrudDBMainModelStoreContainer" CdmEntityContainer="MVCcrudDBMainContext">
+  <EntityContainerMapping StorageEntityContainer="MVCcrudDBMainModelStoreContainer" CdmEntityContainer="MVCcrudDBContext">
     <EntitySetMapping Name="Employees">
       <EntityTypeMapping TypeName="MVCcrudDBMainModel.Employee">
         <MappingFragment StoreEntitySet="Employee">
@@ -10,6 +10,7 @@
           <ScalarProperty Name="Salary" ColumnName="Salary" />
           <ScalarProperty Name="Designation" ColumnName="Designation" />
           <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

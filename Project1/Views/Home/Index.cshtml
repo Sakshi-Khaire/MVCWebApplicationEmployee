@@ -36,6 +36,9 @@
         <th>
             @Html.DisplayNameFor(model => model.ManagerId)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
         <th></th>
     </tr>
 
@@ -59,6 +62,18 @@
         <td>
             @Html.DisplayFor(modelItem => item.ManagerId)
         </td>
+        <td>
+            @if(item.Status == 0)
+                {
+                    <p>Inactive</p>
+                }
+            else
+                {
+                    <p>Active</p>
+                }
+        
+        </td>
+
         <td>
             <button class="btn btn-primary" style="color:white !important;">
                 @Html.ActionLink("Edit", "Edit", new { id = item.EmployeeId }, new { style = "color:white" })

@@ -15,6 +15,7 @@ namespace Project1
 
     public partial class Employee
     {
+        [Required]
         public int EmployeeId { get; set; }
 
         [Required]
@@ -29,7 +30,10 @@ namespace Project1
         [Required]
         public string Designation { get; set; }
 
-
+        [Required]
         public Nullable<int> ManagerId { get; set; }
+
+        [Required]
+        public Nullable<int> Status { get; set; }
     }
 }

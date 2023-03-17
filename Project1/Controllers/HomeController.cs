@@ -9,12 +9,13 @@ namespace Project1.Controllers
     public class HomeController : Controller
     {
 
-        MVCcrudDBMainContext _context = new MVCcrudDBMainContext();
+        MVCcrudDBContext _context = new MVCcrudDBContext();
 
 
         public ActionResult Index()
         {
             var employeeList = _context.Employees.OrderBy(x => x.Name).ToList();
+            //Console.WriteLine(employeeList);
             return View(employeeList);
         }
 

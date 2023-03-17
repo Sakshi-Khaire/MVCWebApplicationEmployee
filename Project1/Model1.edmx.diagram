@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f9177d3280804413b62e775315799449" Name="Diagram1">
-        <EntityTypeShape EntityType="MVCcrudDBMainModel.Employee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="false" />
+      <Diagram DiagramId="3c9dfaeba661419dbeb7113a90451c2d" Name="Diagram1">
+        <EntityTypeShape EntityType="MVCcrudDBMainModel.Employee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

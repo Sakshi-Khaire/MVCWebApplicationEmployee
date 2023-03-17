@@ -13,10 +13,10 @@ namespace Project1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MVCcrudDBMainContext : DbContext
+    public partial class MVCcrudDBContext : DbContext
     {
-        public MVCcrudDBMainContext()
-            : base("name=MVCcrudDBMainContext")
+        public MVCcrudDBContext()
+            : base("name=MVCcrudDBContext")
         {
         }
     

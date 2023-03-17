@@ -10,8 +10,9 @@
     <Property Name="Salary" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="ManagerId" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
   </EntityType>
-  <EntityContainer Name="MVCcrudDBMainContext" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="MVCcrudDBContext" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Employees" EntityType="Self.Employee" />
   </EntityContainer>
 </Schema>
