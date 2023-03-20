@@ -54,12 +54,18 @@
         <dt>
             @Html.DisplayNameFor(model => model.Status)
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.Status)
+            @if (Model.Status == 0)
+            {
+                <p>Inactive</p>
+            }
+            else
+            {
+                <p>Active</p>
+            }
         </dd>
-    </dl>
-</div>
+
+    </dl></div>
 
 <button class="btn btn-light" style="color:white !important;">
     @Html.ActionLink("Back to List", "Index")

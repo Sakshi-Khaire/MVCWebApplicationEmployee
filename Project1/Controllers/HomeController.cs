@@ -15,7 +15,6 @@ namespace Project1.Controllers
         public ActionResult Index()
         {
             var employeeList = _context.Employees.OrderBy(x => x.Name).ToList();
-            //Console.WriteLine(employeeList);
             return View(employeeList);
         }
 
